@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> @ViewBag.Title -  Simple Blog</title>
+
+
+</head>
+<body>
+    <header>
+        <h1> <a href=@Url.RouteUrl("Home")>Simple Blog</a></h1>
+    </header>
+    <p><a href=@Url.RouteUrl("Login")>Click here</a> to Login!</p>
+    
+    @RenderBody()
+
+    <footer>
+        &copy; @DateTime.UtcNow.Year
+    </footer>
+
+    @RenderSection("Scripts",false)
+</body>
+</html>
